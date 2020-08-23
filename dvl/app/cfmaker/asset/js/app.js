@@ -11,7 +11,7 @@ let arraySp = new Array();
 let page;
 
 let urlMenu = new Array(
-  "https://cafe.naver.com/develoid",
+  "https://cafe.naver.com/develoid/936527",
   "https://cafe.naver.com/develoid/827731",
   "https://cafe.naver.com/develoid/901013",
   "https://cafe.naver.com/develoid/menu/1",
@@ -19,7 +19,7 @@ let urlMenu = new Array(
 );
 
 let resourceMenu = new Array(
-  "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTgz/MDAxNTk4MjAzNjUxMDY3.U_GkymrJJmUcyWpRfjZnLrx08p9fJivydU0raJqXfG0g.wffFa2Qv-mWxnMZW1plGMJaCfjM0gebFebNWO6nxNAMg.PNG/notice1.png",
+  "https://cafefiles.pstatic.net/MjAyMDA4MjRfMjQ1/MDAxNTk4MjEzNzU2MDA1.7vRwglMW36IPseCB3dqv1ApFprrgt3cuFSrQc2vfdtwg.nbv0uYqgcwOGBIyhh1_rK9MK51Q_YLMJjcVDwTddbMkg.PNG/notice1.png",
   "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTA1/MDAxNTk4MjAzNjUxMzUx.NMB7e3B0wvUAmP2N_f_VVj9_61luh3zmAL84qgMvhWYg.bUrxgBPs1t2-qNqOoocl9CfqxGF0YiA-7x_b5dn5iGkg.PNG/notice3.png",
   "https://cafefiles.pstatic.net/MjAyMDA4MjRfMzkg/MDAxNTk4MjAzNjUxNjEx.pfI05sjRTUTe0RfkO2mMXrr4RXPHlnF9F5l1jl-Q3f8g.oJWwKhes13cZZn5D0yh_r6ugb6jCW8EHMN8mQeRjiCYg.PNG/notice2.png",
   "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTEw/MDAxNTk4MjAzNjUxOTA5.g_ke5EyEJDlkNlmc5pwlH0wwAUaY6RBQ4yni3yrHigAg.iz0Tdjaje_IrI3ocIoqaoD9unfCJhNZg4ooT04jGNNwg.PNG/more.png",
@@ -30,10 +30,10 @@ let resourceBest = "https://cafefiles.pstatic.net/MjAyMDA4MjNfMTU3/MDAxNTk4MTkyN
 let resourceContent = "https://cafefiles.pstatic.net/MjAyMDA4MjNfMTcy/MDAxNTk4MTkyNzIzMzE5.nP0xtg8rEODtAoQEZNj5pJ9NlJtiV6nfq3pJeHWxFnQg.KJHyAgiGjYqXyzn76KgE2PE5HVx259tYaK2PDeRP1Msg.PNG/content.png";
 let resourceSponsor = "https://cafefiles.pstatic.net/MjAyMDA4MjNfNDQg/MDAxNTk4MTkyNzMyMTMy.r4Y4Jc0cAyj8AqPXEY_0MP3IzfBPzutURE5QCdnP0iIg.fp5ahDCFelpqh55YmHJmFipEHbTQR-kvaUgpamV_KDQg.PNG/sponsor.png";
 let resourceCopyright = "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTY3/MDAxNTk4MjA1MjQ4MDA4.RWNLRf-GafhKiTrawM0PZ3m6TPQTgWQpvwMACnCs1yAg.R4-kym7rYdX1RshFyEDxkoWt-DqjjYu_sTly6-CEBbAg.PNG/copyright.png";
-let resourceBlank = "";
+let resourceBlank = "https://cafefiles.pstatic.net/MjAyMDA2MTVfMjk0/MDAxNTkyMjMxMDEwNzE5.0geDSpRciQhBcP9UHLDMnMLNyUP56IFYjyGFo50Lr18g.3tQdIO2P1RPfbjcjwXlHu_erEhS92QtqgmRUMF_C_hQg.PNG/blank.png";
 
 let urlBest = "https://cafe.naver.com/develoid/menu/1363";
-let urlContent = "https://cafe.naver.com/develoid/menu/1363";
+let urlContent = "https://cafe.naver.com/develoid/menu/1312";
 let urlSponsor = "https://cafe.naver.com/develoid/menu/604";
 
 // Best Photo
@@ -73,7 +73,7 @@ function ControlBt(type) {
   if(type == "add") {
     for(let i=0; i<5; i++) {
       cntBt++;
-      $('#bt').append('<tr id="bt_'+cntBt+'"><td>'+cntBt+'</td><td><input type="text" id="bt_i'+cntBt+'"></td><td><input type="number" id="bt_u'+cntBt+'"></td></tr>');
+      $('#bt').append('<tr id="bt_'+cntBt+'"><td>'+cntBt+'</td><td><input type="text" id="bt_i'+cntBt+'"></td><td><input type="text" id="bt_u'+cntBt+'"></td></tr>');
     }
   } else if(type == "rm") {
     if(cntBt > 0) {
@@ -120,7 +120,7 @@ function DataCheck(item) {
 // Data Check 1
 function DataCheckImg(item) {
   if( item == "" || item == null || item == undefined || ( item != null && typeof item == "object" && !Object.keys(item).length ) ){
-    return "";
+    return "resourceBlank";
   } else {
     //item = item.replace("https://cafefiles.pstatic.net/", "http://cafefiles.pstatic.net/");
     //item = item.replace("https://postfiles.pstatic.net/", "http://postfiles.pstatic.net/");
@@ -145,7 +145,7 @@ function Make() {
   arrayBt = new Array();
   arraySp = new Array();
 
-  page = "<!-- 디벨로이드 대문 v2020.09 / 개발과 디자인 SiryuA, 밤푸딩 -->"
+  page = "<!-- 디벨로이드 대문 v마개조v | 대문 개발 및 디자인 시류아, 딸기푸딩 -->"
 
   // Best Photo = BP
   for(let i=0; i<cntBp; i++) {
@@ -244,7 +244,7 @@ function Make() {
         let inurl = arrayBt[i+j].url
 
         if(inimg.length > 0) {
-          page += "<td><a href='https://cafe.naver.com/develoid/"+inurl+"' target='_blank'><img id='"+inimg+"' src='"+inimg+"' width='160' height='160' style='width: 160px; height: 160px; box-shadow: 0px 2px 4px rgb(220, 220, 220); border-radius: 2px;'></a></td>";
+          page += "<td><a href='"+inurl+"' target='_blank'><img id='"+inimg+"' src='"+inimg+"' width='160' height='160' style='width: 160px; height: 160px; box-shadow: 0px 2px 4px rgb(220, 220, 220); border-radius: 2px;'></a></td>";
         } else {
           page += "<td></td>";
         }
@@ -268,7 +268,7 @@ function Make() {
         let inurl = arraySp[i+j].url
 
         if(inimg.length > 0) {
-          page += "<td><a href='https://cafe.naver.com/develoid/"+inurl+"' target='_blank'><img id='"+inimg+"' src='"+inimg+"' width='160' height='160' style='width: 160px; height: 160px; box-shadow: 0px 2px 4px rgb(220, 220, 220); border-radius: 2px;'></a></td>";
+          page += "<td><a href='"+inurl+"' target='_blank'><img id='"+inimg+"' src='"+inimg+"' width='160' height='160' style='width: 160px; height: 160px; box-shadow: 0px 2px 4px rgb(220, 220, 220); border-radius: 2px;'></a></td>";
         } else {
           page += "<td></td>";
         }
