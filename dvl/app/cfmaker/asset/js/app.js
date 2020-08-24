@@ -26,10 +26,10 @@ let resourceMenu = new Array(
   "https://cafefiles.pstatic.net/MjAyMDA4MjRfMjM4/MDAxNTk4MjAzNjUyMTY1.8U91jktx74yaIUW-2tSTGf0XQIk70o-knWC9j0kgKvog.xFEzTKmPrWqbbjJO6tP2j2j9_Z9yYq1dIn5UAtmH88Yg.PNG/contact.png"
 );
 
-let resourceBest = "https://cafefiles.pstatic.net/MjAyMDA4MjNfMTU3/MDAxNTk4MTkyNzIyNjgx.NyVaAyS1HL6Lxp6TZK3k2XihFXR5KULAXg4LJYDprQgg.GvTcU-GaXzAGrFm_-Gc3i4vfpfzFi63kT5HYyi5xeiUg.PNG/best.png";
-let resourceContent = "https://cafefiles.pstatic.net/MjAyMDA4MjNfMTcy/MDAxNTk4MTkyNzIzMzE5.nP0xtg8rEODtAoQEZNj5pJ9NlJtiV6nfq3pJeHWxFnQg.KJHyAgiGjYqXyzn76KgE2PE5HVx259tYaK2PDeRP1Msg.PNG/content.png";
-let resourceSponsor = "https://cafefiles.pstatic.net/MjAyMDA4MjNfNDQg/MDAxNTk4MTkyNzMyMTMy.r4Y4Jc0cAyj8AqPXEY_0MP3IzfBPzutURE5QCdnP0iIg.fp5ahDCFelpqh55YmHJmFipEHbTQR-kvaUgpamV_KDQg.PNG/sponsor.png";
-let resourceCopyright = "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTY3/MDAxNTk4MjA1MjQ4MDA4.RWNLRf-GafhKiTrawM0PZ3m6TPQTgWQpvwMACnCs1yAg.R4-kym7rYdX1RshFyEDxkoWt-DqjjYu_sTly6-CEBbAg.PNG/copyright.png";
+let resourceBest = "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTY4/MDAxNTk4MjQzMTYyMDcy.Pd4hw3IGFxKNJYY5ExFCVIkjgxo-TFoFfZJHqYvxXEAg.0qwbCiTRdLVx9crBw469y_Nu3mp1YAiv4H5To14BQSQg.PNG/best.png";
+let resourceContent = "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTUy/MDAxNTk4MjQzMTYyNTQ3.v3Uja6ILyYeAb5DEzAn3IPtHv6zmNKZMtxBE8t8jX7Eg.FUiaiZ2oo1vK8GChziA0kXbtmhuoNFZ-xncJ8C9-Wxwg.PNG/content.png";
+let resourceSponsor = "https://cafefiles.pstatic.net/MjAyMDA4MjRfMjg4/MDAxNTk4MjQ0MzI5MTAw.rq0yxeaqll6n2nExeoD8WelonDK9hYZdZr5H1XF4v7Ug.pBytCcgA-4XhCxEDp-PZ3CqE8zMtiKo5TkdIgCfrku4g.PNG/sponsor.png";
+let resourceCopyright = "https://cafefiles.pstatic.net/MjAyMDA4MjRfMTgz/MDAxNTk4MjQzMTYzMTQx.5UGciiCbhYN9jZFjt9hsQTkYFPsHgD5eUdQpTf1ShHYg.ljJ10dESf4g6RQbFGXW39ZvdpFTUBXDXbgX6Edf3bfIg.PNG/copyright.png";
 let resourceBlank = "https://cafefiles.pstatic.net/MjAyMDA2MTVfMjk0/MDAxNTkyMjMxMDEwNzE5.0geDSpRciQhBcP9UHLDMnMLNyUP56IFYjyGFo50Lr18g.3tQdIO2P1RPfbjcjwXlHu_erEhS92QtqgmRUMF_C_hQg.PNG/blank.png";
 
 let urlBest = "https://cafe.naver.com/develoid/menu/1363";
@@ -258,7 +258,7 @@ function Make() {
   // Sponsor Thumbnail
   if(cntSp > 0) {
     console.log(arraySp);
-    page += "<div width='836' height='auto';'><a href'="+urlSponsor+"' style='text-decoration:none;' target='_blank'><img id='"+DataCheckImg(resourceSponsor)+"' src='"+DataCheckImg(resourceSponsor)+"' width='824' height='auto' style='width: 824px; height: auto; box-shadow: 0px 2px 4px rgb(220, 220, 220); border-radius: 2px;'></a></div>";
+    page += "<div width='836' height='auto';'><a href='"+urlSponsor+"' target='_blank'><img id='"+DataCheckImg(resourceSponsor)+"' src='"+DataCheckImg(resourceSponsor)+"' width='824' height='auto' style='width: 824px; height: auto; box-shadow: 0px 2px 4px rgb(220, 220, 220); border-radius: 2px;'></a></div>";
     page += "<table width='836' cellspacing='6' cellpadding='0'><tbody>";
 
     for(let i=0; i<arraySp.length; i+=5) {
